@@ -11,10 +11,10 @@
       ],
       "UpstreamPathTemplate": "/products",
       "UpstreamHttpMethod": [ "GET", "POST" ],
-      "DelegatingHandlers": [],
-      "AddHeadersToRequest": {
+      "DelegatingHandlers": [ "ApiKeyDelegatingHandler" ]
+      /*"AddHeadersToRequest": {
         "x-api-key": "super-secret-key"
-      }
+      }*/
     },
     {
       "DownstreamPathTemplate": "/api/products/{id}",
@@ -27,10 +27,11 @@
       ],
       "UpstreamPathTemplate": "/products/{id}",
       "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ],
-      "DelegatingHandlers": [],
+      "DelegatingHandlers": [ "ApiKeyDelegatingHandler" ]
+      /*
       "AddHeadersToRequest": {
         "x-api-key": "super-secret-key"
-      }
+      }*/
     },
     {
       "DownstreamPathTemplate": "/api/orders",
@@ -43,10 +44,12 @@
       ],
       "UpstreamPathTemplate": "/orders",
       "UpstreamHttpMethod": [ "GET", "POST" ],
-      "DelegatingHandlers": [],
+      "DelegatingHandlers": [ "ApiKeyDelegatingHandler" ]
+      /*
       "AddHeadersToRequest": {
         "x-api-key": "super-secret-key"
-      }
+      },*/
+   
     },
     {
       "DownstreamPathTemplate": "/api/orders/{id}",
@@ -59,10 +62,10 @@
       ],
       "UpstreamPathTemplate": "/orders/{id}",
       "UpstreamHttpMethod": [ "GET", "PUT", "DELETE" ],
-      "DelegatingHandlers": [],
+      "DelegatingHandlers": [ "ApiKeyDelegatingHandler" ]/*
       "AddHeadersToRequest": {
         "x-api-key": "super-secret-key"
-      }
+      }*/
     }
   ],
   "GlobalConfiguration": {
